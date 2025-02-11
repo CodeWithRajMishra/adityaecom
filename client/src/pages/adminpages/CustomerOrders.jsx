@@ -8,7 +8,7 @@ const CustomerOrders=()=>{
 
     const loadData= async()=>{
         try {
-            let api="https://ecomm12pm.onrender.com/admin/orderdetail";
+            let api="https://adityaecom.onrender.com/admin/orderdetail";
             const response= await axios.get(api);
             setMydata(response.data);
         } catch (error) {

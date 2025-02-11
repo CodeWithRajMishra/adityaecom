@@ -14,7 +14,7 @@ const Signup=()=>{
       e.preventDefault();
       try {
       
-        let api="https://ecomm12pm.onrender.com/users/userregister";
+        let api="https://adityaecom.onrender.com/users/userregister";
       const response= await axios.post(api, input);
       console.log(response.data);
       alert("Data save!!!");

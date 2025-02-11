@@ -12,7 +12,7 @@ const AdminLogin=()=>{
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try {
-             let api="https://ecomm12pm.onrender.com/admin/adminlogin";
+             let api="https://adityaecom.onrender.com/admin/adminlogin";
              const response= await axios.post(api, {adminuser:adminuser, adminpassword:adminpassword});  
              if (response.status==200)
              {

@@ -35,7 +35,7 @@ const handleInput=(e)=>{
 
 
     try {
-      let api="https://ecomm12pm.onrender.com/admin/productsave";
+      let api="https://adityaecom.onrender.com/admin/productsave";
       const response = await axios.post(api, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });

@@ -17,7 +17,7 @@ const Products = () => {
 
    const loadData=async ()=>{
        try {
-         let api="https://ecomm12pm.onrender.com/products/productdisplay";
+         let api="https://adityaecom.onrender.com/products/productdisplay";
          const response= await axios.get(api);
          setMydata(response.data)
          console.log(response.data);
@@ -39,7 +39,7 @@ const Products = () => {
                   <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                   <div className="product-box">
                      <i>
-                   <img style={cursorPointer}  onClick={()=>{proDisplay(item._id)}} src={`http://localhost:8000/${item.defaultImage}`}  style={{height:'200px'}}/>
+                   <img style={cursorPointer}  onClick={()=>{proDisplay(item._id)}} src={`https://adityaecom.onrender.com/${item.defaultImage}`}  style={{height:'200px'}}/>
                         </i>
                      <h3>{item.productname}</h3>
                      <span>{item.productprice}</span>

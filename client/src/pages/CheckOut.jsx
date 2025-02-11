@@ -19,7 +19,7 @@ const CheckOut=()=>{
     }, [])
 
   const loadData=async()=>{
-    let api="http://localhost:8000/users/getuserdetail";
+    let api="https://adityaecom.onrender.com/users/getuserdetail";
     try {
          const response= await axios.post(api, {id:localStorage.getItem("userid")});
          setMydata(response.data);
@@ -46,11 +46,11 @@ const initPay = (data) => {
     currency: data.currency,
     name: productName,
     description: "Test",
-    image: `http://localhost:8000/${myimg}`,
+    image: `https://adityaecom.onrender.com/${myimg}`,
     order_id: data.id,
     handler: async (response) => {
       try {
-        const verifyURL = "https://localhost:8000/api/payment/verify";
+        const verifyURL = "https://adityaecom.onrender.com/api/payment/verify";
         const {data} = await axios.post(verifyURL,response);
       } catch(error) {
         console.log(error);
@@ -66,7 +66,7 @@ const initPay = (data) => {
 
 const handlePay = async () => {
   try {
-    const orderURL = "https://ecomm12pm.onrender.com/api/payment/orders";
+    const orderURL = "https://adityaecom.onrender.com/api/payment/orders";
     const {data} = await axios.post(orderURL,{amount: totalAmount, productname:productName, customername:mydata.name, address:mydata.address, email:mydata.email, id:mydata._id});
     console.log(data);
     initPay(data.data); 

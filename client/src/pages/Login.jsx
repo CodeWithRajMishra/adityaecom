@@ -17,7 +17,7 @@ const Login=()=>{
       e.preventDefault();
       try {
       
-        let api="https://ecomm12pm.onrender.com/users/userlogin";
+        let api="https://adityaecom.onrender.com/users/userlogin";
       const response= await axios.post(api, input);
       console.log(response.data);
       message.success("You are succesfully login!"); 

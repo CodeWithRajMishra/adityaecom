@@ -8,7 +8,7 @@ const ViewProduct = () => {
     const [proData, setProData]= useState({});
     const [bigImage, setBigImage]= useState("");
     const loadData=async()=>{
-        let api="https://ecomm12pm.onrender.com/products/productdatashow";
+        let api="https://adityaecom.onrender.com/products/productdatashow";
         const response= await axios.post(api, {id:id});
         setProData(response.data);
         setBigImage(response.data.defaultImage); 
@@ -29,12 +29,12 @@ const ViewProduct = () => {
             <Row className="justify-content-left">
                 <Col  style={{display: 'flex', justifyContent: 'left'}}>
                     <Card className="text-center justify-content-center m-3 " style={{ width: '20rem' }}>
-         <Card.Img variant="top" src={`http://localhost:8000/${bigImage}`}  style={{height:'200px'}}/>
+         <Card.Img variant="top" src={`https://adityaecom.onrender.com/${bigImage}`}  style={{height:'200px'}}/>
           
           <div style={{display:"flex", gap:"10px", marginTop:"10px"}}>
          {proData.images && proData.images.length > 0 ? (
                 proData.images.map((item) => (
-                <img style={{cursor:"pointer"}} onClick={()=>{myBigImage(item)}} src={`http://localhost:8000/${item}`} width="50" height="50" />
+                <img style={{cursor:"pointer"}} onClick={()=>{myBigImage(item)}} src={`https://adityaecom.onrender.com/${item}`} width="50" height="50" />
                 ))
               ) : (
                 <p>No additional images available.</p>
